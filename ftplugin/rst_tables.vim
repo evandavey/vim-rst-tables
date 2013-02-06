@@ -277,7 +277,7 @@ def draw_table(table, manual_widths=None):
             output.append(header_line)
             first = False
         else:
-            #pass
+            pass
             #output.append(normal_line)
 
     return output
