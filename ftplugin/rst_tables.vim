@@ -148,16 +148,16 @@ def parse_table(raw_lines):
 
 def table_line(widths, header=False):
     if header:
-        linechar = '='
+        linechar = '-'
     else:
         linechar = '-'
-    sep = '+'
+    sep = ':'
     parts = []
     for width in widths:
         parts.append(linechar * width)
     if parts:
         parts = [''] + parts + ['']
-    return sep.join(parts)
+    return '|'+sep.join(parts)+'|'
 
 
 def get_field_width(field_text):
@@ -277,7 +277,8 @@ def draw_table(table, manual_widths=None):
             output.append(header_line)
             first = False
         else:
-            output.append(normal_line)
+            #pass
+            #output.append(normal_line)
 
     return output
 
